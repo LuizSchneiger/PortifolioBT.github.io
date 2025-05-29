@@ -5,287 +5,1217 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quem Sou Eu - Luiz Schneiger</title>
   
-  <!-- Fontes -->
+  <!-- ==================== FONTES ==================== -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- CSS -->
+  <!-- ==================== CSS ==================== -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/portfolio.css">
   
-  <!-- Ícones -->
+  <!-- ==================== ÍCONES ==================== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- ==================== SWIPER CSS ==================== -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 </head>
 <body>
-  <!-- HEADER -->
+  <!-- ==================== HEADER ==================== -->
   <header class="header" id="header">
     <nav class="nav container">
       <a href="index.html" class="nav__logo">Luiz Schneiger</a>
       
       <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list">
+        <ul class="nav__list grid">
           <li class="nav__item">
-            <a href="index.html" class="nav__link">Início</a>
+            <a href="index.html" class="nav__link">
+              <i class="fas fa-home nav__icon"></i> Início
+            </a>
           </li>
           <li class="nav__item">
-            <a href="#about" class="nav__link">Sobre</a>
+            <a href="#about" class="nav__link active-link">
+              <i class="fas fa-user nav__icon"></i> Sobre
+            </a>
           </li>
           <li class="nav__item">
-            <a href="#services" class="nav__link">Serviços</a>
+            <a href="#skills" class="nav__link">
+              <i class="fas fa-trophy nav__icon"></i> Habilidades
+            </a>
           </li>
           <li class="nav__item">
-            <a href="#portfolio" class="nav__link">Portfólio</a>
+            <a href="#services" class="nav__link">
+              <i class="fas fa-briefcase nav__icon"></i> Serviços
+            </a>
           </li>
           <li class="nav__item">
-            <a href="#contact" class="nav__link">Contato</a>
+            <a href="#portfolio" class="nav__link">
+              <i class="fas fa-image nav__icon"></i> Portfólio
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">
+              <i class="fas fa-envelope nav__icon"></i> Contato
+            </a>
           </li>
         </ul>
+        
+        <i class="fas fa-times nav__close" id="nav-close"></i>
       </div>
       
-      <div class="nav__toggle" id="nav-toggle">
-        <i class="fas fa-bars"></i>
+      <div class="nav__btns">
+        <!-- Tema escuro/claro -->
+        <i class="fas fa-moon change-theme" id="theme-button"></i>
+        
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
       </div>
     </nav>
   </header>
   
-  <!-- MAIN -->
+  <!-- ==================== MAIN ==================== -->
   <main class="main">
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="hero__container container">
-        <div class="hero__data">
-          <h1 class="hero__title">Olá, sou<br>Luiz Schneiger</h1>
-          <h3 class="hero__subtitle">Professor e Atleta de Beach Tennis</h3>
-          <a href="#contact" class="button button--flex">
-            Entre em contato <i class="fas fa-arrow-right button__icon"></i>
-          </a>
+    <!-- ==================== HOME ==================== -->
+    <section class="home section" id="home">
+      <div class="home__container container grid">
+        <div class="home__content grid">
+          <div class="home__social">
+            <!-- Links de redes sociais -->
+            <a href="https://instagram.com/LuizSchneigerBT" target="_blank" class="home__social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:Luiz.schneiger@gmail.com" target="_blank" class="home__social-icon">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/5546991155082" target="_blank" class="home__social-icon">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+          
+          <div class="home__img">
+            <svg class="home__blob" viewBox="0 0 200 187">
+              <mask id="mask0" mask-type="alpha">
+                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+              </mask>
+              <g mask="url(#mask0)">
+                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                
+                <!-- 
+                  IMAGEM DE PERFIL HERO
+                  Substitua o caminho da imagem abaixo pelo caminho da sua imagem de perfil
+                  Mantenha o caminho relativo para compatibilidade com GitHub Pages
+                  Dimensões recomendadas: 300x300px ou maior, formato quadrado
+                -->
+                <image class="home__blob-img" x="12" y="18" href="assets/img/hero.jpg"/>
+              </g>
+            </svg>
+          </div>
+          
+          <div class="home__data">
+            <h1 class="home__title">Olá, sou Luiz Schneiger</h1>
+            <h3 class="home__subtitle">Professor e Atleta de Beach Tennis</h3>
+            <p class="home__description">
+              Profissional comprometido com o desenvolvimento do beach tennis, oferecendo aulas, arbitragem e mentorias.
+            </p>
+            <a href="#contact" class="button button--flex">
+              Entre em contato <i class="fas fa-paper-plane button__icon"></i>
+            </a>
+          </div>
         </div>
         
-        <div class="hero__img-container">
-          <!-- Substitua pelo caminho da sua imagem -->
-          <img src="assets/img/hero.jpg" alt="Luiz Schneiger" class="hero__img">
+        <div class="home__scroll">
+          <a href="#about" class="home__scroll-button button--flex">
+            <i class="fas fa-mouse home__scroll-mouse"></i>
+            <span class="home__scroll-name">Rolar para baixo</span>
+            <i class="fas fa-arrow-down home__scroll-arrow"></i>
+          </a>
         </div>
       </div>
     </section>
     
-    <!-- ABOUT SECTION -->
+    <!-- ==================== ABOUT ==================== -->
     <section class="about section" id="about">
-      <h2 class="section-title">Sobre Mim</h2>
+      <h2 class="section__title">Sobre Mim</h2>
+      <span class="section__subtitle">Minha introdução</span>
       
-      <div class="about__container container">
-        <div class="about__img-container">
-          <!-- Substitua pelo caminho da sua imagem -->
-          <img src="assets/img/about.jpg" alt="Luiz Schneiger" class="about__img">
+      <div class="about__container container grid">
+        <div class="about__img">
+          <!-- 
+            IMAGEM SOBRE MIM
+            Substitua o caminho da imagem abaixo pelo caminho da sua imagem para a seção Sobre
+            Mantenha o caminho relativo para compatibilidade com GitHub Pages
+            Dimensões recomendadas: 350x350px ou maior
+          -->
+          <img src="assets/img/about.jpg" alt="Luiz Schneiger - Beach Tennis">
         </div>
         
         <div class="about__data">
           <p class="about__description">
-            Comecei no esporte com o intuito de ser bom como professor e atleta, vi uma oportunidade muito grande nesse esporte de se desenvolver como atleta e professor.
+            Comecei no esporte com o intuito de ser bom como professor e atleta, vi uma oportunidade muito grande nesse esporte de se desenvolver profissionalmente.
             <br><br>
             Tenho uma visão que o esporte transforma vidas. Prezo pelo profissionalismo, comprometimento e caráter dentro e fora das quadras.
           </p>
           
           <div class="about__info">
-            <div class="about__box">
-              <i class="fas fa-medal about__icon"></i>
-              <h3 class="about__title-box">Experiência</h3>
-              <span class="about__subtitle">Anos no esporte</span>
+            <div>
+              <span class="about__info-title">05+</span>
+              <span class="about__info-name">Anos de <br> experiência</span>
             </div>
             
-            <div class="about__box">
-              <i class="fas fa-graduation-cap about__icon"></i>
-              <h3 class="about__title-box">Formação</h3>
-              <span class="about__subtitle">Especializada</span>
+            <div>
+              <span class="about__info-title">20+</span>
+              <span class="about__info-name">Torneios <br> disputados</span>
             </div>
             
-            <div class="about__box">
-              <i class="fas fa-trophy about__icon"></i>
-              <h3 class="about__title-box">Conquistas</h3>
-              <span class="about__subtitle">Competições</span>
+            <div>
+              <span class="about__info-title">50+</span>
+              <span class="about__info-name">Alunos <br> formados</span>
             </div>
           </div>
           
-          <a href="#contact" class="button button--flex">
-            Contato <i class="fas fa-arrow-right button__icon"></i>
-          </a>
+          <div class="about__buttons">
+            <a href="horarios.html" class="button button--flex">
+              Ver Horários <i class="fas fa-calendar button__icon"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
     
-    <!-- SERVICES SECTION -->
+    <!-- ==================== SKILLS ==================== -->
+    <section class="skills section" id="skills">
+      <h2 class="section__title">Habilidades</h2>
+      <span class="section__subtitle">Meu nível técnico</span>
+      
+      <div class="skills__container container grid">
+        <div>
+          <!-- Habilidade 1 -->
+          <div class="skills__content skills__open">
+            <div class="skills__header">
+              <i class="fas fa-table-tennis skills__icon"></i>
+              
+              <div>
+                <h1 class="skills__title">Técnicas de Beach Tennis</h1>
+                <span class="skills__subtitle">Especialista em técnicas avançadas</span>
+              </div>
+              
+              <i class="fas fa-angle-down skills__arrow"></i>
+            </div>
+            
+            <div class="skills__list grid">
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Saque</h3>
+                  <span class="skills__number">95%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__saque"></span>
+                </div>
+              </div>
+              
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Voleio</h3>
+                  <span class="skills__number">90%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__voleio"></span>
+                </div>
+              </div>
+              
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Smash</h3>
+                  <span class="skills__number">85%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__smash"></span>
+                </div>
+              </div>
+              
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Defesa</h3>
+                  <span class="skills__number">80%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__defesa"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Habilidade 2 -->
+          <div class="skills__content skills__close">
+            <div class="skills__header">
+              <i class="fas fa-chalkboard-teacher skills__icon"></i>
+              
+              <div>
+                <h1 class="skills__title">Ensino e Mentoria</h1>
+                <span class="skills__subtitle">Metodologias de ensino eficientes</span>
+              </div>
+              
+              <i class="fas fa-angle-down skills__arrow"></i>
+            </div>
+            
+            <div class="skills__list grid">
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Didática</h3>
+                  <span class="skills__number">90%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__didatica"></span>
+                </div>
+              </div>
+              
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Planejamento de Aulas</h3>
+                  <span class="skills__number">85%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__planejamento"></span>
+                </div>
+              </div>
+              
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Desenvolvimento de Atletas</h3>
+                  <span class="skills__number">80%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__desenvolvimento"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <!-- Habilidade 3 -->
+          <div class="skills__content skills__close">
+            <div class="skills__header">
+              <i class="fas fa-flag-checkered skills__icon"></i>
+              
+              <div>
+                <h1 class="skills__title">Arbitragem</h1>
+                <span class="skills__subtitle">Experiência em competições</span>
+              </div>
+              
+              <i class="fas fa-angle-down skills__arrow"></i>
+            </div>
+            
+            <div class="skills__list grid">
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Regras Oficiais</h3>
+                  <span class="skills__number">95%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__regras"></span>
+                </div>
+              </div>
+              
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Gestão de Torneios</h3>
+                  <span class="skills__number">85%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__gestao"></span>
+                </div>
+              </div>
+              
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Resolução de Conflitos</h3>
+                  <span class="skills__number">80%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__resolucao"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Habilidade 4 -->
+          <div class="skills__content skills__close">
+            <div class="skills__header">
+              <i class="fas fa-bullhorn skills__icon"></i>
+              
+              <div>
+                <h1 class="skills__title">Marketing Esportivo</h1>
+                <span class="skills__subtitle">Promoção e divulgação</span>
+              </div>
+              
+              <i class="fas fa-angle-down skills__arrow"></i>
+            </div>
+            
+            <div class="skills__list grid">
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Redes Sociais</h3>
+                  <span class="skills__number">85%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__redes"></span>
+                </div>
+              </div>
+              
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Parcerias</h3>
+                  <span class="skills__number">80%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__parcerias"></span>
+                </div>
+              </div>
+              
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Divulgação de Marcas</h3>
+                  <span class="skills__number">75%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__divulgacao"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ==================== QUALIFICATION ==================== -->
+    <section class="qualification section">
+      <h2 class="section__title">Qualificações</h2>
+      <span class="section__subtitle">Minha jornada pessoal</span>
+      
+      <div class="qualification__container container">
+        <div class="qualification__tabs">
+          <div class="qualification__button button--flex qualification__active" data-target="#education">
+            <i class="fas fa-graduation-cap qualification__icon"></i>
+            Formação
+          </div>
+          
+          <div class="qualification__button button--flex" data-target="#work">
+            <i class="fas fa-briefcase qualification__icon"></i>
+            Experiência
+          </div>
+        </div>
+        
+        <div class="qualification__sections">
+          <!-- Qualificação Conteúdo 1 -->
+          <div class="qualification__content qualification__active" data-content id="education">
+            <!-- Qualificação 1 -->
+            <div class="qualification__data">
+              <div>
+                <h3 class="qualification__title">Certificação em Beach Tennis</h3>
+                <span class="qualification__subtitle">Confederação Brasileira de Tênis</span>
+                <div class="qualification__calendar">
+                  <i class="fas fa-calendar-alt"></i>
+                  2020
+                </div>
+              </div>
+              
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+            </div>
+            
+            <!-- Qualificação 2 -->
+            <div class="qualification__data">
+              <div></div>
+              
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+              
+              <div>
+                <h3 class="qualification__title">Curso de Arbitragem</h3>
+                <span class="qualification__subtitle">Federação Internacional de Beach Tennis</span>
+                <div class="qualification__calendar">
+                  <i class="fas fa-calendar-alt"></i>
+                  2021
+                </div>
+              </div>
+            </div>
+            
+            <!-- Qualificação 3 -->
+            <div class="qualification__data">
+              <div>
+                <h3 class="qualification__title">Especialização em Metodologia de Ensino</h3>
+                <span class="qualification__subtitle">Academia de Beach Tennis</span>
+                <div class="qualification__calendar">
+                  <i class="fas fa-calendar-alt"></i>
+                  2022
+                </div>
+              </div>
+              
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Qualificação Conteúdo 2 -->
+          <div class="qualification__content" data-content id="work">
+            <!-- Experiência 1 -->
+            <div class="qualification__data">
+              <div>
+                <h3 class="qualification__title">Professor de Beach Tennis</h3>
+                <span class="qualification__subtitle">Academia Areia e Sol</span>
+                <div class="qualification__calendar">
+                  <i class="fas fa-calendar-alt"></i>
+                  2020 - 2021
+                </div>
+              </div>
+              
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+            </div>
+            
+            <!-- Experiência 2 -->
+            <div class="qualification__data">
+              <div></div>
+              
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+              
+              <div>
+                <h3 class="qualification__title">Árbitro em Competições Regionais</h3>
+                <span class="qualification__subtitle">Federação Estadual de Beach Tennis</span>
+                <div class="qualification__calendar">
+                  <i class="fas fa-calendar-alt"></i>
+                  2021 - 2022
+                </div>
+              </div>
+            </div>
+            
+            <!-- Experiência 3 -->
+            <div class="qualification__data">
+              <div>
+                <h3 class="qualification__title">Professor Autônomo</h3>
+                <span class="qualification__subtitle">Aulas particulares e em grupo</span>
+                <div class="qualification__calendar">
+                  <i class="fas fa-calendar-alt"></i>
+                  2022 - Presente
+                </div>
+              </div>
+              
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+            </div>
+            
+            <!-- Experiência 4 -->
+            <div class="qualification__data">
+              <div></div>
+              
+              <div>
+                <span class="qualification__rounder"></span>
+                <!-- <span class="qualification__line"></span> -->
+              </div>
+              
+              <div>
+                <h3 class="qualification__title">Consultor de Marketing Esportivo</h3>
+                <span class="qualification__subtitle">Marcas e eventos de Beach Tennis</span>
+                <div class="qualification__calendar">
+                  <i class="fas fa-calendar-alt"></i>
+                  2023 - Presente
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ==================== SERVICES ==================== -->
     <section class="services section" id="services">
-      <h2 class="section-title">Serviços</h2>
+      <h2 class="section__title">Serviços</h2>
+      <span class="section__subtitle">O que eu ofereço</span>
       
-      <div class="services__container container">
-        <div class="service__card">
-          <div class="service__icon service__icon--primary">
-            <i class="fas fa-table-tennis"></i>
+      <div class="services__container container grid">
+        <!-- Serviço 1 -->
+        <div class="services__content">
+          <div>
+            <i class="fas fa-table-tennis services__icon"></i>
+            <h3 class="services__title">Aulas de<br>Beach Tennis</h3>
           </div>
-          <h3 class="service__title">Aulas de Beach Tennis</h3>
-          <p class="service__description">
-            Aulas personalizadas para todos os níveis, desde iniciantes até jogadores avançados.
-          </p>
+          
+          <span class="button button--flex button--small button--link services__button">
+            Ver mais
+            <i class="fas fa-arrow-right button__icon"></i>
+          </span>
+          
+          <div class="services__modal">
+            <div class="services__modal-content">
+              <h4 class="services__modal-title">Aulas de<br>Beach Tennis</h4>
+              <i class="fas fa-times services__modal-close"></i>
+              
+              <ul class="services__modal-services grid">
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Aulas para todos os níveis: iniciante ao avançado.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Aulas individuais ou em grupo.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Metodologia personalizada para cada aluno.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Desenvolvimento técnico, tático e físico.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Preparação para competições.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         
-        <div class="service__card">
-          <div class="service__icon service__icon--secondary">
-            <i class="fas fa-flag-checkered"></i>
+        <!-- Serviço 2 -->
+        <div class="services__content">
+          <div>
+            <i class="fas fa-flag-checkered services__icon"></i>
+            <h3 class="services__title">Arbitragem<br>Profissional</h3>
           </div>
-          <h3 class="service__title">Arbitragem</h3>
-          <p class="service__description">
-            Serviços de arbitragem profissional para torneios e competições.
-          </p>
+          
+          <span class="button button--flex button--small button--link services__button">
+            Ver mais
+            <i class="fas fa-arrow-right button__icon"></i>
+          </span>
+          
+          <div class="services__modal">
+            <div class="services__modal-content">
+              <h4 class="services__modal-title">Arbitragem<br>Profissional</h4>
+              <i class="fas fa-times services__modal-close"></i>
+              
+              <ul class="services__modal-services grid">
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Arbitragem em torneios e competições.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Organização de chaves e tabelas.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Aplicação das regras oficiais do esporte.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Gestão de conflitos durante partidas.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Consultoria para organização de eventos.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         
-        <div class="service__card">
-          <div class="service__icon service__icon--tertiary">
-            <i class="fas fa-lightbulb"></i>
+        <!-- Serviço 3 -->
+        <div class="services__content">
+          <div>
+            <i class="fas fa-lightbulb services__icon"></i>
+            <h3 class="services__title">Mentorias<br>Especializadas</h3>
           </div>
-          <h3 class="service__title">Mentorias</h3>
-          <p class="service__description">
-            Orientação personalizada para desenvolvimento técnico e tático no beach tennis.
-          </p>
+          
+          <span class="button button--flex button--small button--link services__button">
+            Ver mais
+            <i class="fas fa-arrow-right button__icon"></i>
+          </span>
+          
+          <div class="services__modal">
+            <div class="services__modal-content">
+              <h4 class="services__modal-title">Mentorias<br>Especializadas</h4>
+              <i class="fas fa-times services__modal-close"></i>
+              
+              <ul class="services__modal-services grid">
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Acompanhamento personalizado para atletas.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Planejamento de carreira esportiva.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Análise técnica e tática de jogos.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Preparação mental para competições.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Desenvolvimento de estratégias de jogo.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         
-        <div class="service__card">
-          <div class="service__icon service__icon--primary">
-            <i class="fas fa-bullhorn"></i>
+        <!-- Serviço 4 -->
+        <div class="services__content">
+          <div>
+            <i class="fas fa-bullhorn services__icon"></i>
+            <h3 class="services__title">Marketing e<br>Divulgação</h3>
           </div>
-          <h3 class="service__title">Marketing e Divulgação</h3>
-          <p class="service__description">
-            Serviços de marketing e divulgação para marcas e parcerias no universo do beach tennis.
-          </p>
+          
+          <span class="button button--flex button--small button--link services__button">
+            Ver mais
+            <i class="fas fa-arrow-right button__icon"></i>
+          </span>
+          
+          <div class="services__modal">
+            <div class="services__modal-content">
+              <h4 class="services__modal-title">Marketing e<br>Divulgação</h4>
+              <i class="fas fa-times services__modal-close"></i>
+              
+              <ul class="services__modal-services grid">
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Divulgação de marcas no universo do beach tennis.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Parcerias com marcas e patrocinadores.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Promoção de eventos e torneios.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Estratégias de marketing para escolas de beach tennis.</p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="fas fa-check-circle services__modal-icon"></i>
+                  <p>Consultoria para posicionamento de marca no esporte.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     
-    <!-- PORTFOLIO SECTION -->
+    <!-- ==================== PORTFOLIO ==================== -->
     <section class="portfolio section" id="portfolio">
-      <h2 class="section-title">Portfólio</h2>
+      <h2 class="section__title">Portfólio</h2>
+      <span class="section__subtitle">Trabalhos recentes</span>
       
-      <div class="portfolio__container container">
-        <!-- Item 1 -->
-        <div class="portfolio__item">
-          <!-- Substitua pelo caminho da sua imagem -->
-          <img src="assets/img/portfolio1.jpg" alt="Beach Tennis" class="portfolio__img">
-          <div class="portfolio__data">
-            <h3 class="portfolio__title">Campeonato Regional</h3>
-            <p class="portfolio__description">Participação no campeonato regional de beach tennis.</p>
-            <a href="#" class="portfolio__button">
-              Ver mais <i class="fas fa-arrow-right portfolio__button-icon"></i>
-            </a>
+      <div class="portfolio__container container swiper">
+        <div class="swiper-wrapper">
+          <!-- Portfolio 1 -->
+          <div class="portfolio__content grid swiper-slide">
+            <!-- 
+              IMAGEM PORTFÓLIO 1
+              Substitua o caminho da imagem abaixo pelo caminho da sua imagem para o portfólio
+              Mantenha o caminho relativo para compatibilidade com GitHub Pages
+              Dimensões recomendadas: 500x300px ou proporção similar
+            -->
+            <img src="assets/img/portfolio1.jpg" alt="Campeonato Regional" class="portfolio__img">
+            
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">Campeonato Regional</h3>
+              <p class="portfolio__description">
+                Participação e arbitragem no campeonato regional de beach tennis, com mais de 100 atletas.
+              </p>
+              <a href="#" class="button button--flex button--small portfolio__button">
+                Ver mais
+                <i class="fas fa-arrow-right button__icon"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Portfolio 2 -->
+          <div class="portfolio__content grid swiper-slide">
+            <!-- 
+              IMAGEM PORTFÓLIO 2
+              Substitua o caminho da imagem abaixo pelo caminho da sua imagem para o portfólio
+              Mantenha o caminho relativo para compatibilidade com GitHub Pages
+              Dimensões recomendadas: 500x300px ou proporção similar
+            -->
+            <img src="assets/img/portfolio2.jpg" alt="Clínica de Beach Tennis" class="portfolio__img">
+            
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">Clínica de Beach Tennis</h3>
+              <p class="portfolio__description">
+                Clínica de beach tennis para iniciantes, com foco em técnicas básicas e regras do esporte.
+              </p>
+              <a href="#" class="button button--flex button--small portfolio__button">
+                Ver mais
+                <i class="fas fa-arrow-right button__icon"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Portfolio 3 -->
+          <div class="portfolio__content grid swiper-slide">
+            <!-- 
+              IMAGEM PORTFÓLIO 3
+              Substitua o caminho da imagem abaixo pelo caminho da sua imagem para o portfólio
+              Mantenha o caminho relativo para compatibilidade com GitHub Pages
+              Dimensões recomendadas: 500x300px ou proporção similar
+            -->
+            <img src="assets/img/portfolio3.jpg" alt="Torneio Nacional" class="portfolio__img">
+            
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">Torneio Nacional</h3>
+              <p class="portfolio__description">
+                Organização e participação no torneio nacional de beach tennis, com atletas de todo o país.
+              </p>
+              <a href="#" class="button button--flex button--small portfolio__button">
+                Ver mais
+                <i class="fas fa-arrow-right button__icon"></i>
+              </a>
+            </div>
           </div>
         </div>
         
-        <!-- Item 2 -->
-        <div class="portfolio__item">
-          <!-- Substitua pelo caminho da sua imagem -->
-          <img src="assets/img/portfolio2.jpg" alt="Beach Tennis" class="portfolio__img">
-          <div class="portfolio__data">
-            <h3 class="portfolio__title">Clínica de Beach Tennis</h3>
-            <p class="portfolio__description">Clínica de beach tennis para iniciantes.</p>
-            <a href="#" class="portfolio__button">
-              Ver mais <i class="fas fa-arrow-right portfolio__button-icon"></i>
-            </a>
-          </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next">
+          <i class="fas fa-angle-right swiper-portfolio-icon"></i>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="fas fa-angle-left swiper-portfolio-icon"></i>
         </div>
         
-        <!-- Item 3 -->
-        <div class="portfolio__item">
-          <!-- Substitua pelo caminho da sua imagem -->
-          <img src="assets/img/portfolio3.jpg" alt="Beach Tennis" class="portfolio__img">
-          <div class="portfolio__data">
-            <h3 class="portfolio__title">Torneio Nacional</h3>
-            <p class="portfolio__description">Participação no torneio nacional de beach tennis.</p>
-            <a href="#" class="portfolio__button">
-              Ver mais <i class="fas fa-arrow-right portfolio__button-icon"></i>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    
+    <!-- ==================== PROJECT IN MIND ==================== -->
+    <section class="project section">
+      <div class="project__bg">
+        <div class="project__container container grid">
+          <div class="project__data">
+            <h2 class="project__title">Quer aprender Beach Tennis?</h2>
+            <p class="project__description">
+              Entre em contato agora e agende uma aula experimental com condições especiais.
+            </p>
+            <a href="horarios.html" class="button button--flex button--white">
+              Ver Horários
+              <i class="fas fa-calendar project__icon button__icon"></i>
             </a>
           </div>
+          
+          <img src="assets/img/hero.jpg" alt="Beach Tennis" class="project__img">
         </div>
       </div>
     </section>
     
-    <!-- CONTACT SECTION -->
-    <section class="contact section" id="contact">
-      <h2 class="section-title">Contato</h2>
+    <!-- ==================== TESTIMONIAL ==================== -->
+    <section class="testimonial section">
+      <h2 class="section__title">Depoimentos</h2>
+      <span class="section__subtitle">O que meus alunos dizem</span>
       
-      <div class="contact__container container">
-        <div class="contact__info">
-          <div class="contact__card">
-            <i class="fas fa-envelope contact__card-icon"></i>
-            <h3 class="contact__card-title">Email</h3>
-            <span class="contact__card-data">Luiz.schneiger@gmail.com</span>
-            <a href="mailto:Luiz.schneiger@gmail.com" class="contact__button">
-              Escreva <i class="fas fa-arrow-right contact__button-icon"></i>
-            </a>
+      <div class="testimonial__container container swiper">
+        <div class="swiper-wrapper">
+          <!-- Testimonial 1 -->
+          <div class="testimonial__content swiper-slide">
+            <div class="testimonial__data">
+              <div class="testimonial__header">
+                <img src="assets/img/profile.jpg" alt="Aluno" class="testimonial__img">
+                
+                <div>
+                  <h3 class="testimonial__name">Carlos Silva</h3>
+                  <span class="testimonial__client">Aluno - Categoria C</span>
+                </div>
+              </div>
+              
+              <div>
+                <i class="fas fa-star testimonial__icon-star"></i>
+                <i class="fas fa-star testimonial__icon-star"></i>
+                <i class="fas fa-star testimonial__icon-star"></i>
+                <i class="fas fa-star testimonial__icon-star"></i>
+                <i class="fas fa-star testimonial__icon-star"></i>
+              </div>
+            </div>
+            
+            <p class="testimonial__description">
+              As aulas com o Luiz transformaram meu jogo. Em poucos meses, evoluí muito tecnicamente e consegui subir de categoria. Recomendo a todos!
+            </p>
           </div>
           
-          <div class="contact__card">
-            <i class="fab fa-whatsapp contact__card-icon"></i>
-            <h3 class="contact__card-title">WhatsApp</h3>
-            <span class="contact__card-data">(46) 9 9115-5082</span>
-            <a href="https://wa.me/5546991155082" target="_blank" class="contact__button">
-              Mensagem <i class="fas fa-arrow-right contact__button-icon"></i>
-            </a>
+          <!-- Testimonial 2 -->
+          <div class="testimonial__content swiper-slide">
+            <div class="testimonial__data">
+              <div class="testimonial__header">
+                <img src="assets/img/profile.jpg" alt="Aluna" class="testimonial__img">
+                
+                <div>
+                  <h3 class="testimonial__name">Ana Oliveira</h3>
+                  <span class="testimonial__client">Aluna - Iniciante</span>
+                </div>
+              </div>
+              
+              <div>
+                <i class="fas fa-star testimonial__icon-star"></i>
+                <i class="fas fa-star testimonial__icon-star"></i>
+                <i class="fas fa-star testimonial__icon-star"></i>
+                <i class="fas fa-star testimonial__icon-star"></i>
+                <i class="fas fa-star testimonial__icon-star"></i>
+              </div>
+            </div>
+            
+            <p class="testimonial__description">
+              Comecei do zero com o Luiz e em poucas aulas já estava jogando com confiança. A didática dele é excelente, explica tudo com muita paciência.
+            </p>
           </div>
           
-          <div class="contact__card">
-            <i class="fab fa-instagram contact__card-icon"></i>
-            <h3 class="contact__card-title">Instagram</h3>
-            <span class="contact__card-data">@LuizSchneigerBT</span>
-            <a href="https://instagram.com/LuizSchneigerBT" target="_blank" class="contact__button">
-              Seguir <i class="fas fa-arrow-right contact__button-icon"></i>
-            </a>
+          <!-- Testimonial 3 -->
+          <div class="testimonial__content swiper-slide">
+            <div class="testimonial__data">
+              <div class="testimonial__header">
+                <img src="assets/img/profile.jpg" alt="Aluno" class="testimonial__img">
+                
+                <div>
+                  <h3 class="testimonial__name">Roberto Mendes</h3>
+                  <span class="testimonial__client">Aluno - Categoria A</span>
+                </div>
+              </div>
+              
+              <div>
+                <i class="fas fa-star testimonial__icon-star"></i>
+                <i class="fas fa-star testimonial__icon-star"></i>
+                <i class="fas fa-star testimonial__icon-star"></i>
+                <i class="fas fa-star testimonial__icon-star"></i>
+                <i class="fas fa-star testimonial__icon-star"></i>
+              </div>
+            </div>
+            
+            <p class="testimonial__description">
+              Mesmo sendo um jogador avançado, as mentorias do Luiz me ajudaram a aprimorar aspectos técnicos e táticos que fizeram toda diferença nas competições.
+            </p>
           </div>
+        </div>
+        
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-testimonial"></div>
+      </div>
+    </section>
+    
+    <!-- ==================== CONTACT ME ==================== -->
+    <section class="contact section" id="contact">
+      <h2 class="section__title">Entre em Contato</h2>
+      <span class="section__subtitle">Fale comigo</span>
+      
+      <div class="contact__container container grid">
+        <div>
+          <!-- Contato 1 -->
+          <div class="contact__information">
+            <i class="fas fa-phone contact__icon"></i>
+            
+            <div>
+              <h3 class="contact__title">Telefone/WhatsApp</h3>
+              <span class="contact__subtitle">(46) 9 9115-5082</span>
+              <a href="https://wa.me/5546991155082" target="_blank" class="contact__button">
+                Enviar mensagem <i class="fas fa-arrow-right contact__button-icon"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Contato 2 -->
+          <div class="contact__information">
+            <i class="fas fa-envelope contact__icon"></i>
+            
+            <div>
+              <h3 class="contact__title">Email</h3>
+              <span class="contact__subtitle">Luiz.schneiger@gmail.com</span>
+              <a href="mailto:Luiz.schneiger@gmail.com" class="contact__button">
+                Enviar email <i class="fas fa-arrow-right contact__button-icon"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Contato 3 -->
+          <div class="contact__information">
+            <i class="fab fa-instagram contact__icon"></i>
+            
+            <div>
+              <h3 class="contact__title">Instagram</h3>
+              <span class="contact__subtitle">@LuizSchneigerBT</span>
+              <a href="https://instagram.com/LuizSchneigerBT" target="_blank" class="contact__button">
+                Seguir <i class="fas fa-arrow-right contact__button-icon"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Contato 4 -->
+          <div class="contact__information">
+            <i class="fas fa-map-marker-alt contact__icon"></i>
+            
+            <div>
+              <h3 class="contact__title">Localização</h3>
+              <span class="contact__subtitle">Aulas em diversas quadras da cidade</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact__content">
+          <h3 class="contact__title-form">Envie uma mensagem</h3>
+          
+          <form action="" class="contact__form">
+            <div class="contact__form-div">
+              <label for="name" class="contact__form-tag">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Digite seu nome" class="contact__form-input">
+            </div>
+            
+            <div class="contact__form-div">
+              <label for="email" class="contact__form-tag">Email</label>
+              <input type="email" id="email" name="email" placeholder="Digite seu email" class="contact__form-input">
+            </div>
+            
+            <div class="contact__form-div contact__form-area">
+              <label for="message" class="contact__form-tag">Mensagem</label>
+              <textarea name="message" id="message" cols="30" rows="10" placeholder="Digite sua mensagem" class="contact__form-input"></textarea>
+            </div>
+            
+            <button type="submit" class="button button--flex">
+              Enviar Mensagem
+              <i class="fas fa-paper-plane button__icon"></i>
+            </button>
+          </form>
         </div>
       </div>
     </section>
   </main>
   
-  <!-- FOOTER -->
+  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
-    <div class="footer__container container">
-      <div>
-        <h1 class="footer__title">Luiz Schneiger</h1>
-        <span class="footer__subtitle">Professor e Atleta de Beach Tennis</span>
+    <div class="footer__bg">
+      <div class="footer__container container grid">
+        <div>
+          <h1 class="footer__title">Luiz Schneiger</h1>
+          <span class="footer__subtitle">Professor e Atleta de Beach Tennis</span>
+        </div>
+        
+        <ul class="footer__links">
+          <li>
+            <a href="#services" class="footer__link">Serviços</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="footer__link">Portfólio</a>
+          </li>
+          <li>
+            <a href="#contact" class="footer__link">Contato</a>
+          </li>
+          <li>
+            <a href="horarios.html" class="footer__link">Horários</a>
+          </li>
+        </ul>
+        
+        <div class="footer__socials">
+          <a href="https://instagram.com/LuizSchneigerBT" target="_blank" class="footer__social">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/5546991155082" target="_blank" class="footer__social">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:Luiz.schneiger@gmail.com" class="footer__social">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
       </div>
       
-      <ul class="footer__links">
-        <li>
-          <a href="index.html" class="footer__link">Início</a>
-        </li>
-        <li>
-          <a href="horarios.html" class="footer__link">Horários</a>
-        </li>
-        <li>
-          <a href="#" class="footer__link">Loja</a>
-        </li>
-      </ul>
-      
-      <div class="footer__socials">
-        <a href="https://instagram.com/LuizSchneigerBT" target="_blank" class="footer__social-link">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://facebook.com/" target="_blank" class="footer__social-link">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://youtube.com/" target="_blank" class="footer__social-link">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://wa.me/5546991155082" target="_blank" class="footer__social-link">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </div>
+      <p class="footer__copy">&#169; Luiz Schneiger. Todos os direitos reservados</p>
     </div>
-    
-    <p class="footer__copy">© Luiz Schneiger. Todos os direitos reservados</p>
   </footer>
   
-  <!-- SCROLL TOP -->
+  <!-- ==================== SCROLL TOP ==================== -->
   <a href="#" class="scrollup" id="scroll-up">
     <i class="fas fa-arrow-up scrollup__icon"></i>
   </a>
   
-  <!-- JavaScript -->
+  <!-- ==================== SWIPER JS ==================== -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  
+  <!-- ==================== MAIN JS ==================== -->
   <script src="assets/js/main.js"></script>
+  
+  <!-- ==================== PORTFOLIO JS ==================== -->
+  <script>
+    /*==================== PORTFOLIO SWIPER ====================*/
+    let swiperPortfolio = new Swiper('.portfolio__container', {
+      cssMode: true,
+      loop: true,
+      
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+    
+    /*==================== TESTIMONIAL SWIPER ====================*/
+    let swiperTestimonial = new Swiper('.testimonial__container', {
+      loop: true,
+      grabCursor: true,
+      spaceBetween: 48,
+      
+      pagination: {
+        el: '.swiper-pagination-testimonial',
+        clickable: true,
+        dynamicBullets: true,
+      },
+      
+      breakpoints: {
+        568: {
+          slidesPerView: 2,
+        }
+      }
+    });
+    
+    /*==================== SERVICES MODAL ====================*/
+    const modalViews = document.querySelectorAll('.services__modal'),
+          modalBtns = document.querySelectorAll('.services__button'),
+          modalCloses = document.querySelectorAll('.services__modal-close');
+    
+    let modal = function(modalClick) {
+      modalViews[modalClick].classList.add('active-modal');
+    }
+    
+    modalBtns.forEach((modalBtn, i) => {
+      modalBtn.addEventListener('click', () => {
+        modal(i);
+      });
+    });
+    
+    modalCloses.forEach((modalClose) => {
+      modalClose.addEventListener('click', () => {
+        modalViews.forEach((modalView) => {
+          modalView.classList.remove('active-modal');
+        });
+      });
+    });
+    
+    /*==================== QUALIFICATION TABS ====================*/
+    const tabs = document.querySelectorAll('[data-target]'),
+          tabContents = document.querySelectorAll('[data-content]');
+    
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.target);
+        
+        tabContents.forEach(tabContent => {
+          tabContent.classList.remove('qualification__active');
+        });
+        target.classList.add('qualification__active');
+        
+        tabs.forEach(t => {
+          t.classList.remove('qualification__active');
+        });
+        tab.classList.add('qualification__active');
+      });
+    });
+    
+    /*==================== SKILLS ACCORDION ====================*/
+    const skillsContent = document.getElementsByClassName('skills__content'),
+          skillsHeader = document.querySelectorAll('.skills__header');
+    
+    function toggleSkills() {
+      let itemClass = this.parentNode.className;
+      
+      for(i = 0; i < skillsContent.length; i++) {
+        skillsContent[i].className = 'skills__content skills__close';
+      }
+      
+      if(itemClass === 'skills__content skills__close') {
+        this.parentNode.className = 'skills__content skills__open';
+      }
+    }
+    
+    skillsHeader.forEach((el) => {
+      el.addEventListener('click', toggleSkills);
+    });
+  </script>
+  
+  <!-- ==================== ADDITIONAL CSS FOR SKILLS PERCENTAGES ==================== -->
+  <style>
+    .skills__saque {
+      width: 95%;
+    }
+    
+    .skills__voleio {
+      width: 90%;
+    }
+    
+    .skills__smash {
+      width: 85%;
+    }
+    
+    .skills__defesa {
+      width: 80%;
+    }
+    
+    .skills__didatica {
+      width: 90%;
+    }
+    
+    .skills__planejamento {
+      width: 85%;
+    }
+    
+    .skills__desenvolvimento {
+      width: 80%;
+    }
+    
+    .skills__regras {
+      width: 95%;
+    }
+    
+    .skills__gestao {
+      width: 85%;
+    }
+    
+    .skills__resolucao {
+      width: 80%;
+    }
+    
+    .skills__redes {
+      width: 85%;
+    }
+    
+    .skills__parcerias {
+      width: 80%;
+    }
+    
+    .skills__divulgacao {
+      width: 75%;
+    }
+  </style>
 </body>
 </html>
