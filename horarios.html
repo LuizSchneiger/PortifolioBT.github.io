@@ -3,374 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horários de Aula - Luiz Schneiger</title>
+  <title>Horários de Aula - Luiz Henrique</title>
   
-  <!-- Fontes -->
+  <!-- ==================== FONTES ==================== -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- CSS -->
+  <!-- ==================== CSS ==================== -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/schedule.css">
   
-  <!-- Ícones -->
+  <!-- ==================== ÍCONES ==================== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- HEADER -->
+  <!-- ==================== HEADER ==================== -->
   <header class="header" id="header">
     <nav class="nav container">
-      <a href="index.html" class="nav__logo">Luiz Schneiger</a>
+      <a href="index.html" class="nav__logo">Luiz Henrique</a>
       
       <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list">
+        <ul class="nav__list grid">
           <li class="nav__item">
-            <a href="index.html" class="nav__link">Início</a>
+            <a href="index.html" class="nav__link">
+              <i class="fas fa-home nav__icon"></i> Início
+            </a>
           </li>
           <li class="nav__item">
-            <a href="quem-sou-eu.html" class="nav__link">Quem Sou Eu</a>
+            <a href="quem-sou-eu.html" class="nav__link">
+              <i class="fas fa-user nav__icon"></i> Quem Sou Eu
+            </a>
           </li>
           <li class="nav__item">
-            <a href="horarios.html" class="nav__link active-link">Horários</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Loja</a>
+            <a href="horarios.html" class="nav__link active-link">
+              <i class="fas fa-calendar nav__icon"></i> Horários
+            </a>
           </li>
         </ul>
+        
+        <i class="fas fa-times nav__close" id="nav-close"></i>
       </div>
       
-      <div class="nav__toggle" id="nav-toggle">
-        <i class="fas fa-bars"></i>
+      <div class="nav__btns">
+        <!-- Tema escuro/claro -->
+        <i class="fas fa-moon change-theme" id="theme-button"></i>
+        
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
       </div>
     </nav>
   </header>
   
-  <!-- MAIN -->
+  <!-- ==================== MAIN ==================== -->
   <main class="main">
-    <!-- SCHEDULE HEADER -->
-    <section class="schedule-header">
-      <div class="container">
-        <h1 class="schedule-title">Horários de Aula</h1>
-        <p class="schedule-description">
-          Confira os horários disponíveis para as aulas de beach tennis.
-          Entre em contato via WhatsApp para agendar sua aula.
-        </p>
+    <section class="section">
+      <div class="horarios__container container">
+        <!-- O conteúdo será gerado dinamicamente pelo JavaScript -->
       </div>
     </section>
     
-    <!-- SCHEDULE TABLE -->
-    <section class="schedule-container container">
-      <!-- TABELA DE HORÁRIOS -->
-      <!-- 
-        INSTRUÇÕES PARA EDIÇÃO:
-        1. Para adicionar ou remover um horário, adicione ou remova uma linha <tr>...</tr>
-        2. Para adicionar ou remover um dia, adicione ou remova uma coluna <th> no cabeçalho e <td> em cada linha
-        3. Para editar uma aula:
-           - Altere o texto dentro da div com classe "schedule-class"
-           - Mude a classe para refletir a categoria (experimental, beginner, category-e, etc.)
-           - Atualize o link do WhatsApp se necessário
-        4. Para deixar um horário vazio, use <td></td> ou <td><div class="schedule-class empty"></div></td>
-      -->
-      <table class="schedule-table">
-        <tr>
-          <th>Horário</th>
-          <th>Segunda</th>
-          <th>Terça</th>
-          <th>Quarta</th>
-          <th>Quinta</th>
-          <th>Sábado</th>
-        </tr>
-        
-        <tr>
-          <td>08:00</td>
-          <td>
-            <div class="schedule-class schedule-class-experimental">
-              Experimental
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        
-        <tr>
-          <td>09:00</td>
-          <td>
-            <div class="schedule-class schedule-class-beginner">
-              Iniciante
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="schedule-class schedule-class-beginner">
-              Iniciante
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        
-        <tr>
-          <td>14:00</td>
-          <td></td>
-          <td>
-            <div class="schedule-class schedule-class-category-e">
-              Categoria E
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="schedule-class schedule-class-category-e">
-              Categoria E
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="schedule-class schedule-class-category-e">
-              Categoria E
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td></td>
-        </tr>
-        
-        <tr>
-          <td>15:00</td>
-          <td></td>
-          <td>
-            <div class="schedule-class schedule-class-category-d">
-              Categoria D
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="schedule-class schedule-class-category-d">
-              Categoria D
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="schedule-class schedule-class-category-d">
-              Categoria D
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td></td>
-        </tr>
-        
-        <tr>
-          <td>16:00</td>
-          <td></td>
-          <td>
-            <div class="schedule-class schedule-class-category-c">
-              Categoria C
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="schedule-class schedule-class-category-c">
-              Categoria C
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="schedule-class schedule-class-category-c">
-              Categoria C
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td></td>
-        </tr>
-        
-        <tr>
-          <td>17:00</td>
-          <td></td>
-          <td>
-            <div class="schedule-class schedule-class-category-b">
-              Categoria B
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="schedule-class schedule-class-category-b">
-              Categoria B
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="schedule-class schedule-class-category-b">
-              Categoria B
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td></td>
-        </tr>
-        
-        <tr>
-          <td>18:00</td>
-          <td></td>
-          <td>
-            <div class="schedule-class schedule-class-category-a">
-              Categoria A
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="schedule-class schedule-class-category-a">
-              Categoria A
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="schedule-class schedule-class-professional">
-              Profissional
-              <a href="https://wa.me/5546991155082" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar
-              </a>
-            </div>
-          </td>
-          <td></td>
-        </tr>
-      </table>
+    <!-- ==================== CONTACT ME ==================== -->
+    <section class="contact section" id="contact">
+      <h2 class="section__title">Entre em Contato</h2>
+      <span class="section__subtitle">Fale comigo</span>
       
-      <!-- LEGENDA -->
-      <div class="schedule-legend">
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: rgba(30, 136, 229, 0.2);"></div>
-          <span class="legend-text">Experimental</span>
+      <div class="contact__container container grid">
+        <div>
+          <!-- Contato 1 -->
+          <div class="contact__information">
+            <i class="fas fa-phone contact__icon"></i>
+            
+            <div>
+              <h3 class="contact__title">Telefone/WhatsApp</h3>
+              <span class="contact__subtitle">(46) 99115-5082</span>
+              <a href="https://wa.me/5546991155082" target="_blank" class="contact__button">
+                Enviar mensagem <i class="fas fa-arrow-right contact__button-icon"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Contato 2 -->
+          <div class="contact__information">
+            <i class="fas fa-envelope contact__icon"></i>
+            
+            <div>
+              <h3 class="contact__title">Email</h3>
+              <span class="contact__subtitle">Luiz.schneiger@gmail.com</span>
+              <a href="mailto:Luiz.schneiger@gmail.com" class="contact__button">
+                Enviar email <i class="fas fa-arrow-right contact__button-icon"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Contato 3 -->
+          <div class="contact__information">
+            <i class="fab fa-instagram contact__icon"></i>
+            
+            <div>
+              <h3 class="contact__title">Instagram</h3>
+              <span class="contact__subtitle">@LuizSchneigerBT</span>
+              <a href="https://instagram.com/LuizSchneigerBT" target="_blank" class="contact__button">
+                Seguir <i class="fas fa-arrow-right contact__button-icon"></i>
+              </a>
+            </div>
+          </div>
         </div>
-        
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: rgba(255, 193, 7, 0.2);"></div>
-          <span class="legend-text">Iniciante</span>
-        </div>
-        
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: rgba(76, 175, 80, 0.2);"></div>
-          <span class="legend-text">Categoria E</span>
-        </div>
-        
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: rgba(76, 175, 80, 0.3);"></div>
-          <span class="legend-text">Categoria D</span>
-        </div>
-        
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: rgba(76, 175, 80, 0.4);"></div>
-          <span class="legend-text">Categoria C</span>
-        </div>
-        
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: rgba(76, 175, 80, 0.6);"></div>
-          <span class="legend-text">Categoria B</span>
-        </div>
-        
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: rgba(76, 175, 80, 0.8);"></div>
-          <span class="legend-text">Categoria A</span>
-        </div>
-        
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: #1A237E;"></div>
-          <span class="legend-text">Profissional</span>
-        </div>
-      </div>
-      
-      <div class="schedule-note">
-        <p>* Os horários podem sofrer alterações. Consulte sempre a versão mais atualizada.</p>
-        <p>* Para agendar uma aula, clique no botão "Agendar" correspondente ao horário desejado.</p>
-      </div>
-      
-      <div class="schedule-cta">
-        <a href="https://wa.me/5546991155082" class="button button--flex" target="_blank">
-          <i class="fab fa-whatsapp"></i> Fale comigo no WhatsApp
-        </a>
       </div>
     </section>
   </main>
   
-  <!-- FOOTER -->
+  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
-    <div class="footer__container container">
-      <div>
-        <h1 class="footer__title">Luiz Schneiger</h1>
-        <span class="footer__subtitle">Professor e Atleta de Beach Tennis</span>
+    <div class="footer__bg">
+      <div class="footer__container container grid">
+        <div>
+          <h1 class="footer__title">Luiz Henrique</h1>
+          <span class="footer__subtitle">Atleta e Professor de Beach Tennis</span>
+        </div>
+        
+        <ul class="footer__links">
+          <li>
+            <a href="quem-sou-eu.html#services" class="footer__link">Serviços</a>
+          </li>
+          <li>
+            <a href="quem-sou-eu.html#portfolio" class="footer__link">Portfólio</a>
+          </li>
+          <li>
+            <a href="#contact" class="footer__link">Contato</a>
+          </li>
+          <li>
+            <a href="horarios.html" class="footer__link">Horários</a>
+          </li>
+        </ul>
+        
+        <div class="footer__socials">
+          <a href="https://instagram.com/LuizSchneigerBT" target="_blank" class="footer__social">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/5546991155082" target="_blank" class="footer__social">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:Luiz.schneiger@gmail.com" class="footer__social">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
       </div>
       
-      <ul class="footer__links">
-        <li>
-          <a href="index.html" class="footer__link">Início</a>
-        </li>
-        <li>
-          <a href="quem-sou-eu.html" class="footer__link">Quem Sou Eu</a>
-        </li>
-        <li>
-          <a href="#" class="footer__link">Loja</a>
-        </li>
-      </ul>
-      
-      <div class="footer__socials">
-        <a href="https://instagram.com/LuizSchneigerBT" target="_blank" class="footer__social-link">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://facebook.com/" target="_blank" class="footer__social-link">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://youtube.com/" target="_blank" class="footer__social-link">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://wa.me/5546991155082" target="_blank" class="footer__social-link">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </div>
+      <p class="footer__copy">&#169; Luiz Henrique. Todos os direitos reservados</p>
     </div>
-    
-    <p class="footer__copy">© Luiz Schneiger. Todos os direitos reservados</p>
   </footer>
   
-  <!-- SCROLL TOP -->
+  <!-- ==================== SCROLL TOP ==================== -->
   <a href="#" class="scrollup" id="scroll-up">
     <i class="fas fa-arrow-up scrollup__icon"></i>
   </a>
   
-  <!-- JavaScript -->
+  <!-- ==================== DADOS DOS HORÁRIOS ==================== -->
+  <script src="assets/js/horarios-data.js"></script>
+  <script src="assets/js/horarios-loader.js"></script>
+  
+  <!-- ==================== MAIN JS ==================== -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -260,8 +260,3 @@ const horariosData = {
     "Protetor solar é recomendado para aulas ao ar livre."
   ]
 };
-
-// Exportar o objeto para uso em outros arquivos
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = horariosData;
-}

@@ -249,8 +249,3 @@ const portfolioData = {
     }
   ]
 };
-
-// Exportar o objeto para uso em outros arquivos
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = portfolioData;
-}
